@@ -34,19 +34,19 @@ const NavMiddleLeft: React.FC = () => {
   ];
 
   return (
-    <nav className="fixed top-4 left-1/2 transform -translate-x-1/2 flex flex-row space-x-4 md:top-1/2 md:left-4 md:transform-none md:-translate-y-1/2 md:flex-col md:space-y-4 md:space-x-0 z-50 relative">
-      {/* Horizontal line for mobile */}
-      <div className="absolute top-1/2 left-0 right-0 border-t border-gray-500 transform -translate-y-1/2 md:hidden" />
-      {/* Vertical line for desktop */}
-      <div className="absolute top-0 bottom-0 left-1/2 border-l border-gray-500 transform -translate-x-1/2 hidden md:block" />
-
+    <nav className="fixed top-4 left-1/2 transform -translate-x-1/2 flex flex-row space-x-4 md:top-1/2 md:left-4 md:transform-none md:-translate-y-1/2 md:flex-col md:space-y-4 md:space-x-0 z-50">
       {items.map(({ id, label }) => (
         <div key={id} className="relative">
           <a href={`#${id}`} className="px-2 py-1 hover:underline">
             {label}
           </a>
           {activeId === id && (
-            <span className="absolute block w-2 h-2 bg-white rounded-full bottom-[-4px] left-1/2 transform -translate-x-1/2 md:top-1/2 md:left-[-6px] md:bottom-auto md:transform md:-translate-y-1/2" />
+            <>
+              {/* Mobile underline indicator */}
+              <span className="absolute bottom-0 left-0 w-full h-0.5 bg-white md:hidden" />
+              {/* Desktop dot indicator */}
+              <span className="hidden md:block absolute w-2 h-2 bg-white rounded-full left-[-6px] top-1/2 -translate-y-1/2" />
+            </>
           )}
         </div>
       ))}

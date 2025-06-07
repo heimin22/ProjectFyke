@@ -31,8 +31,8 @@ export default function Index() {
       </Reveal>
       {/* Projects Section */}
       <Reveal>
-          <section id="projects" className="p-8 grid grid-cols-1 md:grid-cols-3 grid-rows-3 md:grid-rows-2 gap-6">
-          <div className="col-span-2 row-span-2 bg-gray-800 p-6 hover:opacity-80 transition duration-200">
+          <section id="projects" className="p-16 md:pl-28 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          <div className="md:col-span-2 md:row-span-2 bg-gray-800 p-6 hover:opacity-80 transition duration-200">
             <h3 className="text-3xl mb-2">LockerApp</h3>
             <p>Secured and media-hiding application built with Flutter.</p>
           </div>
@@ -48,7 +48,7 @@ export default function Index() {
       </Reveal>
       {/* Contact Section */}
       <Reveal>
-        <section id="contact" className="flex flex-col items-center justify-center p-8">
+        <section id="contact" className="flex flex-col items-center justify-center p-8 md:pl-20">
           <h2 className="text-4xl mb-4">Contact</h2>
           <ul className="space-y-2">
             <li>
