@@ -3,8 +3,7 @@ import { useEffect } from "react";
 const HorizontalScroll: React.FC = () => {
   useEffect(() => {
     const onWheel = (e: WheelEvent) => {
-      // Only intercept on desktop (md and up)
-      if (window.innerWidth < 768 || e.deltaY === 0) return;
+      if (e.deltaY === 0) return;
       e.preventDefault();
       window.scrollBy({ left: e.deltaY, behavior: "auto" });
     };

@@ -8,6 +8,7 @@
   /* Reset default html/body and set up horizontal scrolling and background */
   html, body {
     @apply bg-[#121212] text-[#F5F5F5] overflow-x-auto overflow-y-hidden h-screen snap-x snap-mandatory;
+    cursor: url('/spaceship-cursor.svg') 16 16, auto;
   }
   body {
     @apply font-description;
