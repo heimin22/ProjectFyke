@@ -8,7 +8,7 @@ import {
 import type { LinksFunction } from "@remix-run/node";
 
 import "./tailwind.css";
-import { StarsBackground, CustomCursor, NavMiddleLeft, HorizontalScroll } from "./components";
+import { StarsBackground, CustomCursor, NavMiddleLeft, HorizontalScroll, Spaceship } from "./components";
 
 export const links: LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -48,6 +48,7 @@ export default function App() {
       <CustomCursor />
       <NavMiddleLeft />
       <HorizontalScroll />
+      <Spaceship />
       <Outlet />
     </Layout>
   );
