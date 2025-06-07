@@ -32,19 +32,19 @@ export default function Index() {
       {/* Projects Section */}
       <Reveal>
           <section id="projects" className="p-16 md:pl-28 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          <div className="md:col-span-2 md:row-span-2 bg-gray-800 p-6 hover:opacity-80 transition duration-200">
-            <h3 className="text-3xl mb-2">LockerApp</h3>
-            <p>Secured and media-hiding application built with Flutter.</p>
-          </div>
-          <div className="bg-gray-800 p-6 hover:opacity-80 transition duration-200">
-            <h3 className="text-3xl mb-2">Pasada</h3>
-            <p>Ride-hailing app tailored for modernized jeepneys in the Philippines.</p>
-          </div>
-          <div className="bg-gray-800 p-6 hover:opacity-80 transition duration-200">
-            <h3 className="text-3xl mb-2">Other Projects</h3>
-            <p>Experiments with web and mobile technologies.</p>
-          </div>
-        </section>
+            <a href="https://github.com/heimin22/Pasada" target="_blank" rel="noopener noreferrer" className="md:col-span-2 md:row-span-2 bg-gray-800 p-6 hover:opacity-80 transition duration-200 block">
+              <h3 className="text-3xl mb-2">Pasada</h3>
+              <p>Ride-hailing app tailored for modernized jeepneys in the Philippines built with Flutter.</p>
+            </a>
+            <a href="https://github.com/heimin22/LockerApp" target="_blank" rel="noopener noreferrer" className="bg-gray-800 p-6 hover:opacity-80 transition duration-200 block">
+              <h3 className="text-3xl mb-2">LockerApp</h3>
+              <p>Secured and media-hiding application built with Flutter.</p>
+            </a>
+            <a href="https://github.com/heimin22?tab=repositories" target="_blank" rel="noopener noreferrer" className="bg-gray-800 p-6 hover:opacity-80 transition duration-200 block">
+              <h3 className="text-3xl mb-2">Other Projects</h3>
+              <p>Experiments with web and mobile technologies.</p>
+            </a>
+          </section>
       </Reveal>
       {/* Contact Section */}
       <Reveal>
