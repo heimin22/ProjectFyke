@@ -4,9 +4,110 @@
 
 html,
 body {
-  @apply bg-white dark:bg-gray-950;
+  @apply bg-paper dark:bg-gray-950;
 
   @media (prefers-color-scheme: dark) {
     color-scheme: dark;
   }
+}
+
+/* Debris background texture */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+  background-size: 30px 30px;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Reveal animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease-out;
+}
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Glitch effect */
+@keyframes glitch {
+  0% { transform: translate(0); text-shadow: 0 0 #000; }
+  20% { transform: translate(-2px, 2px); text-shadow: -2px 2px #000; }
+  40% { transform: translate(2px, -2px); text-shadow: 2px -2px #000; }
+  60% { transform: translate(-2px, -2px); text-shadow: -2px -2px #000; }
+  80% { transform: translate(2px, 2px); text-shadow: 2px 2px #000; }
+  100% { transform: translate(0); text-shadow: 0 0 #000; }
+}
+.glitch:hover {
+  animation: glitch 0.5s infinite;
+}
+
+/* Cursor follower */
+.cursor-follower {
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: black;
+  mix-blend-mode: difference;
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s ease-out;
+}
+
+/* Typewriter effect */
+.typer {
+  overflow: hidden;
+  border-right: 0.15em solid black;
+  white-space: nowrap;
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: black; }
+}
+
+/* Loading state */
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  z-index: 50;
+  animation: fadeOut 1s ease forwards 2.5s;
+}
+@keyframes fadeOut {
+  to { opacity: 0; visibility: hidden; }
+}
+
+/* Distortion effect */
+@keyframes distort {
+  0%   { transform: skew(0deg); filter: none; }
+  20%  { transform: skew(5deg); filter: blur(1px); }
+  40%  { transform: skew(-5deg); filter: blur(0.5px); }
+  60%  { transform: skew(3deg); filter: blur(1.2px); }
+  80%  { transform: skew(-3deg); filter: blur(0.8px); }
+  100% { transform: skew(0deg); filter: none; }
+}
+.distort:hover {
+  animation: distort 0.5s ease-in-out;
 }
