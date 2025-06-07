@@ -4,9 +4,6 @@ export default {
   content: ["./app/**/{**,.client,.server}/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
-      colors: {
-        paper: "#f3eacb",
-      },
       fontFamily: {
         sans: [
           "Inter",
@@ -18,7 +15,14 @@ export default {
           "Segoe UI Symbol",
           "Noto Color Emoji",
         ],
-        typewriter: ["Special Elite", "Courier New", "Courier", "monospace"],
+        description: [
+          "Lekton",
+          "monospace",
+        ],
+        title: [
+          "Major Mono Display",
+          "monospace",
+        ],
       },
     },
   },
