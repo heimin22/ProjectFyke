@@ -1,6 +1,8 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 export default function GlobalEffects() {
+  const cursorRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
     // Scroll-triggered reveal animations
     const reveals = document.querySelectorAll<HTMLElement>('.reveal');
@@ -18,20 +20,25 @@ export default function GlobalEffects() {
     reveals.forEach(el => observer.observe(el));
 
     // Cursor-following element
-    const cursor = document.createElement('div');
-    cursor.className = 'cursor-follower';
-    document.body.appendChild(cursor);
+    const cursor = cursorRef.current;
     const moveCursor = (e: MouseEvent) => {
-      cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+      if (cursor) {
+        cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+      }
     };
     document.addEventListener('mousemove', moveCursor);
 
     return () => {
       observer.disconnect();
       document.removeEventListener('mousemove', moveCursor);
-      cursor.remove();
     };
   }, []);
 
-  return null;
-} 
+  return (
+    <div 
+      ref={cursorRef}
+      className="cursor-follower"
+      style={{ position: 'fixed', pointerEvents: 'none', zIndex: 9999 }}
+    />
+  );
+}
