@@ -11,14 +11,18 @@ const Typewriter: React.FC<TypewriterProps> = ({ text, speed = 100, className = 
 
   useEffect(() => {
     let index = 0;
-    const interval = setInterval(() => {
-      setDisplayed((prev) => prev + text.charAt(index));
-      index++;
-      if (index >= text.length) {
-        clearInterval(interval);
+    let current = "";
+    let timer: ReturnType<typeof setTimeout>;
+    const type = () => {
+      if (index < text.length) {
+        current += text[index];
+        setDisplayed(current);
+        index++;
+        timer = setTimeout(type, speed);
       }
-    }, speed);
-    return () => clearInterval(interval);
+    };
+    type();
+    return () => clearTimeout(timer);
   }, [text, speed]);
 
   return <span className={className}>{displayed}</span>;

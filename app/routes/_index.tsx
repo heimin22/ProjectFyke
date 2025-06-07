@@ -5,7 +5,7 @@ import Reveal from "../components/Reveal";
 export const meta: MetaFunction = () => {
   return [
     { title: "Fyke Tonel Portfolio" },
-    { name: "description", content: "Typewriter-style portfolio of Fyke Tonel" }, 
+    { name: "description", content: "A portfolio of Fyke Tonel" }, 
   ];
 };
 
