@@ -11,7 +11,7 @@ export const meta: MetaFunction = () => {
 
 export default function Index() {
   return (
-    <div className="flex">
+    <div className="flex flex-nowrap">
       {/* About Section */}
       <Reveal>
         <section id="about" className="flex flex-col items-center justify-center p-8">

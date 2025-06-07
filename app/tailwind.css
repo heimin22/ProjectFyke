@@ -7,13 +7,13 @@
 @layer base {
   /* Reset default html/body and set up horizontal scrolling and background */
   html, body {
-    @apply bg-[#121212] text-[#F5F5F5] overflow-x-scroll overflow-y-hidden h-screen snap-x snap-mandatory;
+    @apply bg-[#121212] text-[#F5F5F5] overflow-x-auto overflow-y-hidden h-screen snap-x snap-mandatory;
   }
   body {
     @apply font-description;
   }
   section {
-    @apply inline-block w-screen h-screen snap-start;
+    @apply w-screen h-screen snap-start flex-none;
   }
   h1, h2, h3, h4 {
     @apply font-title;
