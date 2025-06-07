@@ -7,11 +7,12 @@ const Starfield: React.FC = () => {
     const canvas = canvasRef.current;
     if (!canvas) return;
     const ctx = canvas.getContext("2d");
-    let width = window.innerWidth;
+    const parent = canvas.parentElement as HTMLElement;
+    let width = parent.scrollWidth || window.innerWidth;
     let height = window.innerHeight;
     canvas.width = width;
     canvas.height = height;
-    const stars = Array.from({ length: 100 }, () => ({
+    const stars = Array.from({ length: 300 }, () => ({
       x: Math.random() * width,
       y: Math.random() * height,
       radius: Math.random() * 1.5 + 0.5,
@@ -38,7 +39,7 @@ const Starfield: React.FC = () => {
     };
     animate();
     const handleResize = () => {
-      width = window.innerWidth;
+      width = (canvas.parentElement as HTMLElement).scrollWidth || window.innerWidth;
       height = window.innerHeight;
       canvas.width = width;
       canvas.height = height;
