@@ -4,7 +4,7 @@ const NavMiddleLeft: React.FC = () => {
   const [activeId, setActiveId] = useState<string>("about");
 
   useEffect(() => {
-    const sections = ["about", "projects", "contact"];
+    const sections = ["about", "skills", "projects", "contact"];
     const observers: IntersectionObserver[] = [];
 
     sections.forEach((id) => {
@@ -29,6 +29,7 @@ const NavMiddleLeft: React.FC = () => {
 
   const items = [
     { id: "about", label: "About" },
+    { id: "skills", label: "Skills" },
     { id: "projects", label: "Projects" },
     { id: "contact", label: "Contact" },
   ];
