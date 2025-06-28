@@ -5,7 +5,7 @@ import Starfield from "../components/Starfield";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "Fyke Tonel Portfolio" },
+    { title: "Fyke's Portfolio" },
     { name: "description", content: "A portfolio of Fyke Tonel" }, 
   ];
 };
