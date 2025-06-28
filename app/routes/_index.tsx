@@ -25,8 +25,27 @@ export default function Index() {
             <Typewriter text="Aspiring Flutter Developer" speed={100} />
           </h2>
           <p className="mt-6 max-w-xl">
-            I am a 21-year-old developer with expertise in Flutter, Dart, Python, Git, SQL databases, and modern web technologies.
+            I am a 21-year-old developer and a student at the STI College Caloocan, pursuing a Bachelor of Science in Computer Science.
           </p>
+          <p className="mt-6 max-w-xl">
+            Why does this website looks so simple? This was made in a span of 2 hours.
+          </p>
+        </section>
+      </Reveal>
+      {/* Skills Section */}
+      <Reveal>
+        <section id="skills" className="p-16 md:pl-28 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-6">
+          {[
+            "Flutter", "Dart", "Python", "Android Studio", "IntelliJ IDEA", "PyCharm",
+            "Visual Studio Code", "Visual Studio", "Git", "GitHub", "Java", "C#", "MySQL",
+            "PostgreSQL", "SQL", "SQLite", "Supabase", "Postman", "Google Cloud Platforms",
+            "Express.js", "Node.js", "npm", "Windows Powershell", "TypeScript", "JavaScript",
+            "Docker", "Deno", "NeoVim", "Firebase", "Figma", "Cursor"
+          ].map(skill => (
+            <div key={skill} className="bg-gray-800 p-6 hover:opacity-80 transition duration-200 flex items-center justify-center">
+              <span className="text-xl">{skill}</span>
+            </div>
+          ))}
         </section>
       </Reveal>
       {/* Projects Section */}
