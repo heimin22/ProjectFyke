@@ -9,6 +9,7 @@ import type { LinksFunction } from "@remix-run/node";
 
 import "./tailwind.css";
 import { StarsBackground, CustomCursor, NavMiddleLeft, HorizontalScroll } from "./components";
+import minilogo from "../assets/minilogo.png";
 
 export const links: LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -21,6 +22,7 @@ export const links: LinksFunction = () => [
     rel: "stylesheet",
     href: "https://fonts.googleapis.com/css2?family=Lekton&family=Major+Mono+Display&display=swap",
   },
+  { rel: "icon", href: minilogo },
 ];
 
 export function Layout({ children }: { children: React.ReactNode }) {
