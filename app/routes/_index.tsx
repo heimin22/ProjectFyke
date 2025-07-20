@@ -34,7 +34,7 @@ export default function Index() {
       </Reveal>
       {/* Skills Section */}
       <Reveal>
-        <section id="skills" className="p-16 md:pl-28 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-6">
+        <section id="skills" className="p-16 md:pl-28 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-6 h-screen overflow-y-auto">
           {[
             "Flutter", "Dart", "Python", "Android Studio", "IntelliJ IDEA", "PyCharm",
             "Visual Studio Code", "Visual Studio", "Git", "GitHub", "Java", "C#", "MySQL",
@@ -42,7 +42,7 @@ export default function Index() {
             "Express.js", "Node.js", "npm", "Windows Powershell", "TypeScript", "JavaScript",
             "Docker", "Deno", "NeoVim", "Firebase", "Figma", "Cursor"
           ].map(skill => (
-            <div key={skill} className="bg-gray-800 p-6 hover:opacity-80 transition duration-200 flex items-center justify-center">
+            <div key={skill} className="border-4 border-white p-6 hover:opacity-80 transition duration-200 flex items-center justify-center bg-white/10">
               <span className="text-xl">{skill}</span>
             </div>
           ))}
@@ -50,16 +50,16 @@ export default function Index() {
       </Reveal>
       {/* Projects Section */}
       <Reveal>
-          <section id="projects" className="p-16 md:pl-28 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-            <a href="https://github.com/heimin22/Pasada" target="_blank" rel="noopener noreferrer" className="md:col-span-2 md:row-span-2 bg-gray-800 p-6 hover:opacity-80 transition duration-200 block">
+          <section id="projects" className="p-16 md:pl-28 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 h-screen overflow-y-auto">
+            <a href="https://github.com/heimin22/Pasada" target="_blank" rel="noopener noreferrer" className="md:col-span-2 md:row-span-2 border-4 border-white p-6 hover:opacity-80 transition duration-200 block bg-white/10">
               <h3 className="text-3xl mb-2">Pasada</h3>
               <p>Ride-hailing app tailored for modernized jeepneys in the Philippines built with Flutter.</p>
             </a>
-            <a href="https://github.com/heimin22/LockerApp" target="_blank" rel="noopener noreferrer" className="bg-gray-800 p-6 hover:opacity-80 transition duration-200 block">
+            <a href="https://github.com/heimin22/LockerApp" target="_blank" rel="noopener noreferrer" className="border-4 border-white p-6 hover:opacity-80 transition duration-200 block bg-white/10">
               <h3 className="text-3xl mb-2">LockerApp</h3>
               <p>Secured and media-hiding application built with Flutter.</p>
             </a>
-            <a href="https://github.com/heimin22?tab=repositories" target="_blank" rel="noopener noreferrer" className="bg-gray-800 p-6 hover:opacity-80 transition duration-200 block">
+            <a href="https://github.com/heimin22?tab=repositories" target="_blank" rel="noopener noreferrer" className="border-4 border-white p-6 hover:opacity-80 transition duration-200 block bg-white/10">
               <h3 className="text-3xl mb-2">Other Projects</h3>
               <p>Experiments with web and mobile technologies.</p>
             </a>
